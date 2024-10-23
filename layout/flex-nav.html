@@ -19,7 +19,7 @@
             padding-inline:15px;
             background-color: #ffe062;
         }
-        .nav-menu-left {
+        /* .nav-menu-left {
             display: flex;
             gap: 15px;
         }
@@ -27,6 +27,14 @@
             margin-left: auto;
             display: flex;
             gap:15px;
+        } */
+        .nav-menu {
+            display: flex;
+            gap: 15px;
+        }
+        /* 虛擬類別 */
+        .nav-menu:nth-of-type(3){
+            margin-left: auto;
         }
         /* 後代選取器 */
         nav a {
@@ -46,15 +54,15 @@
         <div class="nav-logo">
             <a href="#">Logo</a>
         </div>
-        <div class="nav-menu-left">
+        <div class="nav-menu-left nav-menu">
             <a href="#" class="nav-link">Link 1</a>
             <a href="#" class="nav-link">Link 2</a>
             <a href="#" class="nav-link">Link 3</a>
         </div>
-        <div class="nav-menu-right">
-            <a href="#" class="nav-link">Link 1</a>
-            <a href="#" class="nav-link">Link 2</a>
-            <a href="#" class="nav-link">Link 3</a>
+        <div class="nav-menu-right nav-menu">
+            <a href="#" class="nav-link">Link 4</a>
+            <a href="#" class="nav-link">Link 5</a>
+            <a href="#" class="nav-link">Link 6</a>
         </div>
     </nav>
     <a href="#">test</a>
