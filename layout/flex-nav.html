@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            width: 100%;
+            height: 60px;
+            align-items: center;
+            padding-inline:15px;
+            background-color: #ffe062;
+        }
+        .nav-menu-right {
+            margin-left: auto;
+        }
+        /* 後代選取器 */
+        nav a {
+            color: #000;
+            text-decoration: none;
+            padding-inline:5px;
+        }
+        .nav-logo {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <a href="#">Logo</a>
+        </div>
+        <div class="nav-menu-left">
+            <a href="#" class="nav-link">Link 1</a>
+            <a href="#" class="nav-link">Link 2</a>
+            <a href="#" class="nav-link">Link 3</a>
+        </div>
+        <div class="nav-menu-right">
+            <a href="#" class="nav-link">Link 1</a>
+            <a href="#" class="nav-link">Link 2</a>
+            <a href="#" class="nav-link">Link 3</a>
+        </div>
+    </nav>
+    <a href="#">test</a>
+</body>
+</html>
