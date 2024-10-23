@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            background-color: #ccc;
+            
+            /* 水平對齊 */
+            justify-content: space-between;
+            /* start, end, center, space-between, space-around, space-evenly */
+
+            /* 垂直對齊 */
+            align-items: center;
+            /* start, end, center, stretch, baseline */
+        }
+        .box {
+            width: 300px;
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, aliquid!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, aliquid!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, aliquid!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, aliquid!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, aliquid!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, aliquid!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, aliquid!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, aliquid!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, aliquid!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 4</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, aliquid!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, aliquid!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, aliquid!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
