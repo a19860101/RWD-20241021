@@ -10,35 +10,103 @@
             margin: 0;
             padding: 0;
         }
-        .card {
-            width: 300px;
-            background-color: #ccc;
-        }
-        .card img {
+        img {
             width: 100%;
+        }
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col {
+            width: 25%;
+            padding: 15px;
+        }
+        .card {
+            background-color: #ccc;
         }
         .card-body {
             padding: 15px;
-            height: 300px;
+            height: 250px;
             display: flex;
             flex-direction: column;
-            gap:20px;
+            gap:15px;
         }
-       
-        .card-body a {
+        .card-link {
             margin-top: auto;
+            margin-left: auto;
+
+            text-decoration: none;
+            padding:6px 25px;
+            background-color: #56b9ff;
+            color: #000;
+            border-radius: 5px;
+        }
+        .card-body p {
+            line-height: 1.2;
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <img src="https://picsum.photos/id/22/400/300" alt="" class="card-img">
-        <div class="card-body">
-            <h3>hello</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, eligendi!
-            </p>
-            <a href="#">Link</a>
+    <div class="container">
+        <div class="col">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/id/23/800/600" alt="">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-body-title">title</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae porro quasi.
+                    </p>
+                    <a href="#" class="card-link">link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/id/23/800/600" alt="">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-body-title">title</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae porro quasi.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae porro quasi.
+                    </p>
+                    <a href="#" class="card-link">link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/id/23/800/600" alt="">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-body-title">title</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                    <a href="#" class="card-link">link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/id/23/800/600" alt="">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-body-title">title</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae porro quasi.
+                    </p>
+                    <a href="#" class="card-link">link</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
