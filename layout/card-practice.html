@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+        section {
+            background-color: #f27558;
+            padding-block: 100px;
+        }
+        body {
+            font-family: serif;
+        }
+        .sans {
+            font-family: sans-serif;
+        }
+        .serif {
+            font-family: serif;
+        }
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col {
+            width: 33.3333%;
+            padding: 15px;
+        }
+        .card {
+            background-color: #fff;
+        }
+        .card-img {
+            aspect-ratio: 16/9;
+        }
+        .card-img img {
+            /* width: 100%; */
+            height: 100%;
+            object-fit: cover;
+        }
+        .card-body {
+            height: 300px;
+            text-align: center;
+            padding-inline: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding-block: 20px;
+
+            border-top: 4px solid #f25d58;
+            border-bottom: 8px solid rgb(190, 21, 21);
+        }
+        .card-body h3 {
+            font-size: 1.8rem;
+        }
+        .card-body a {
+            margin-top: auto;
+            color: #f27558;
+            text-decoration: none;
+            border:#f27558 1px solid;
+            padding: 6px 30px;
+            border-radius: 50px;
+        }
+        .card-tag {
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="col">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/id/87/800/600" alt="">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag sans">Travel</div>
+                        <h3>Mountains</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo quaerat iusto rerum velit ullam voluptatem.
+                        </p>
+                        <a href="#" class="sans">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/id/87/800/600" alt="">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag sans">Travel</div>
+                        <h3>Mountains</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo quaerat iusto rerum velit ullam voluptatem.
+                        </p>
+                        <a href="#" class="sans">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/id/87/800/600" alt="">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tag sans">Travel</div>
+                        <h3>Mountains</h3>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo quaerat iusto rerum velit ullam voluptatem.
+                        </p>
+                        <a href="#" class="sans">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
