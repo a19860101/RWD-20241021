@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: min(1200px ,100%);
+            margin-inline: auto;
+            background-color: #ccc;
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            width: 20%;
+        }
+        .box:nth-of-type(1){order:4;}
+        .box:nth-of-type(2){order:1;}
+        /* .box:nth-of-type(3){order:5;} */
+        /* .box:nth-of-type(4){order:3;} */
+        .box:nth-of-type(5){order:2;}
+        /* 自然排序 優先於 人工排序 */
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h3>title 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium repellat esse quibusdam temporibus. Incidunt error repudiandae porro alias reprehenderit ipsa?
+            </p>
+        </div>
+        <div class="box">
+            <h3>title 2</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium repellat esse quibusdam temporibus. Incidunt error repudiandae porro alias reprehenderit ipsa?
+            </p>
+        </div>
+        <div class="box">
+            <h3>title 3</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium repellat esse quibusdam temporibus. Incidunt error repudiandae porro alias reprehenderit ipsa?
+            </p>
+        </div>
+        <div class="box">
+            <h3>title 4</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium repellat esse quibusdam temporibus. Incidunt error repudiandae porro alias reprehenderit ipsa?
+            </p>
+        </div>
+        <div class="box">
+            <h3>title 5</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium repellat esse quibusdam temporibus. Incidunt error repudiandae porro alias reprehenderit ipsa?
+            </p>
+        </div>
+    </div>
+</body>
+</html>
