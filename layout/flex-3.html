@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+            display: flex;
+            background-color: #ccc;
+
+            /* flex-direction: column; */
+            /* flex-wrap: wrap; */
+        }
+        .box {
+            /* width: 33.3333%; */
+            /* height: 600px; */
+            flex-basis: 600px;
+            /* flex-grow: 1; */
+            flex-shrink: 1;
+            padding: 15px;
+        }
+        /* 
+            當flex-direction為row時，flex-basis等同width，且flex-basis優先套用
+            當flex-direction為column時，flex-basis等同height，且flex-basis優先套用
+        */
+        .box:nth-of-type(1){
+            background-color: #fa0; 
+            /* flex-grow:1; */
+            flex-shrink: 3;
+        }
+        .box:nth-of-type(2){
+            background-color: #0af; 
+            /* flex-grow:3; */
+            flex-shrink: 2;
+        }
+        .box:nth-of-type(3){
+            background-color: #f0a; 
+            /* flex-grow:2; */
+            flex-shrink: 1;
+        }
+
+        /* 
+        1200px - 900px = 300px
+
+        300px * 1/6 = 50px
+        300px * 3/6 = 150px
+        300px * 2/6 = 100px
+
+        1200px - 1800px = -600px
+
+        -600 * 3/6 = 300
+        -600 * 2/6 = 200
+        -600 * 1/6 = 100
+
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h3>title</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque veniam dolorum deleniti enim velit necessitatibus ad corporis explicabo molestias amet.
+            </p>
+        </div>
+        <div class="box">
+            <h3>title</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque veniam dolorum deleniti enim velit necessitatibus ad corporis explicabo molestias amet.
+            </p>
+        </div>
+        <div class="box">
+            <h3>title</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque veniam dolorum deleniti enim velit necessitatibus ad corporis explicabo molestias amet.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
