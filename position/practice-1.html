@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            display: block;
+            width: 100%;
+        }
+        .container {
+            width: min(1200px,95%);
+            margin-inline: auto;
+            display: flex;
+        }
+        .col {
+            width: 33.3333%;
+            padding: 15px;
+        }
+        .card-img {
+            aspect-ratio: 4 / 3;
+
+            position: relative;
+        }
+        .card-img img {
+            height: 100%;
+            object-fit: cover;
+        }
+        .card-body {
+            height: 250px;
+            background-color: #ccc;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-body a {
+            margin-top: auto;
+            margin-left: auto;
+        }
+        .card-avatar {
+            width: 45px;
+            height: 45px;
+            background-color: crimson;
+
+            position: absolute;
+            top: 15px;
+            left: 15px;
+
+            border-radius: 50%;
+        }
+        .card-tag {
+            /* width: 60px; */
+            padding: 6px 12px;
+            /* height: 30px; */
+            background-color: #fa0;
+
+            position: absolute;
+            right: 15px;
+            bottom: -15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/id/25/800/600" alt="">
+                    <div class="card-avatar"></div>
+                    <div class="card-tag">時事</div>
+                </div>
+                <div class="card-body">
+                    <h3>title</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente eaque in architecto fuga laborum distinctio?
+                    </p>
+                    <a href="#">link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/id/25/800/600" alt="">
+                    <div class="card-avatar"></div>
+                    <div class="card-tag">科技</div>
+                </div>
+                <div class="card-body">
+                    <h3>title</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente eaque in architecto fuga laborum distinctio?
+                    </p>
+                    <a href="#">link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/id/25/800/600" alt="">
+                    <div class="card-avatar"></div>
+                    <div class="card-tag">科技</div>
+                </div>
+                <div class="card-body">
+                    <h3>title</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente eaque in architecto fuga laborum distinctio?
+                    </p>
+                    <a href="#">link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
