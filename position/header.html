@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            position: relative;
+            background-color: #ccc;
+        }
+        img {
+            width: 100%;
+            display: block;
+            height: 100%;
+            object-fit: cover;
+        }
+        .header-caption {
+            position: absolute;
+            width: 50%;
+            height: fit-content;
+            background-color: #ffffff5d;
+
+            inset:0;
+            margin: auto;
+            padding: 30px;
+            text-align: center;
+
+            border-radius: 12px;                
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://picsum.photos/id/98/1200/600" alt="">
+        <div class="header-caption">
+            <h1>title</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod quas debitis harum?
+            </p>
+            <a href="#">More</a>
+        </div>
+    </header>
+</body>
+</html>
