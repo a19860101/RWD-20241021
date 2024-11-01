@@ -1,6 +1,12 @@
+body {
+    height: 2000px;
+}
 nav {
+    position: fixed;
+    z-index: 9999;
     width: 100%;
-    background-color: #555;
+    background-color: #25252536;
+    backdrop-filter: blur(10px);
     display: flex;
     height: 65px;
     align-items: center;
@@ -40,7 +46,8 @@ header {
     .header-caption {
         width: min(70%, 750px);
         height: fit-content;
-        background-color: #fff;
+        background-color: #ffffff4a;
+        backdrop-filter: blur(10px);
         position: absolute;
         inset: 0;
         margin: auto;
