@@ -16,6 +16,7 @@ img {
     color: #000;
     background-color: #aaa;
     border-radius: 5px;
+    font-size: 1rem;
 }
 /* 按鈕修飾符 */
 .btn-blue {
