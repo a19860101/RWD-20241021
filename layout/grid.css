@@ -6,6 +6,9 @@
     display: flex;
     flex-wrap: wrap;
 }
+.col {
+    flex:1 0 0;
+}
 .col-1 {
     width: calc(100% / 12 * 1);
 }
@@ -42,3 +45,12 @@
 .col-12 {
     width: calc(100% / 12 * 12);
 }
+/* 屬性選取器 */
+[class^="col"]{
+    padding: 15px;
+}
+/* 
+    ^= 開頭是
+    *= 包含
+    $= 結尾是
+*/
