@@ -7,3 +7,21 @@ img {
     display: block;
     width: 100%;
 }
+/* button */
+/* 按鈕結構 */
+.btn {
+    display: inline-block;
+    padding: 6px 30px;
+    text-decoration: none;
+    color: #000;
+    background-color: #aaa;
+    border-radius: 5px;
+}
+/* 按鈕修飾符 */
+.btn-blue {
+    background-color: #4eb8ff;
+}
+.btn-red {
+    background-color: #d50040;
+    color: #fff;
+}
