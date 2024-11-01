@@ -68,6 +68,8 @@ header {
     }
 }
 #about {
+    padding-block: 150px;
+    background-image: linear-gradient(to right bottom,#fff79b,#fffa62);
     i {
         color: #61b5ff;
     }
