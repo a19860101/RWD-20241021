@@ -122,11 +122,18 @@ header {
 }
 
 #blog {
-    .col-6:nth-of-type(3){
-        order:2;
-    }
-    .col-6:nth-of-type(4){
-        order:1;
-    }
+    padding-block: 150px;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(176,229,208,1) 42%, rgba(92,202,238,0.41) 93.6% );
+    .container:nth-of-type(even) {
+        .col-6:first-of-type{
+            order:2;
+        }
 
+        .col-6:last-of-type{
+            order:1;
+        }
+    }
+    .row {
+        align-items: center;
+    }
 }
