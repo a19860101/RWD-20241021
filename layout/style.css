@@ -75,29 +75,28 @@ header {
     }
     .about-item {
         text-align: center;
-        /* display: flex; */
-        /* align-items: center; */
     }
     .about-icon {
-        width: 100px;
-        background-color: #fff;
-        margin-bottom: 30px;
-        margin-inline: auto;
+        width: 120px;
         aspect-ratio: 1 / 1;
+        margin-inline: auto;
+        background-color: #098;
         border-radius: 50%;
-        border:3px solid #0af;
-        /* background-color: #098; */
-        /* margin-right: 10px; */
+
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+        /* display: grid; */
+        /* place-content: center; */
+
+        margin-bottom: 30px;
     }
     .about-body {
-        width: 100%;
         h3 {
             margin-bottom: 20px;
-            font-size: 1.3rem;
-            text-transform: uppercase;
+            font-size: 1.5rem;
         }
     }
+
 }
