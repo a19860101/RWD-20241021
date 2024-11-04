@@ -125,6 +125,10 @@ header {
     padding-block: 150px;
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(176,229,208,1) 42%, rgba(92,202,238,0.41) 93.6% );
     .container:nth-of-type(even) {
+        .blog-body {
+            position: relative;
+            right: -100px;
+        }
         .col-6:first-of-type{
             order:2;
         }
@@ -133,7 +137,19 @@ header {
             order:1;
         }
     }
+    .container:nth-of-type(odd){
+        .blog-body {
+            position: relative;
+            left: -100px
+        }
+    }
     .row {
         align-items: center;
+    }
+    .blog-body {
+        background-color: #ffffff8d;
+        backdrop-filter: blur(8px);
+        padding: 30px;
+        border-radius: 10px;
     }
 }
