@@ -166,10 +166,18 @@ header {
     padding: 8px;
     border-radius: 6px;
     border:1px solid #bababa;
+
+    outline: 0;
+}
+/* 虛擬類別 */
+.form-control:focus {
+    outline: 2px solid #95e8ff;
+    background-color: #c8fdff;
 }
 #contact {
     padding-block: 150px;
     .row {
         align-items: center;
     }
+    
 }
