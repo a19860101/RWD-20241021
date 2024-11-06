@@ -167,3 +167,9 @@ header {
     border-radius: 6px;
     border:1px solid #bababa;
 }
+#contact {
+    padding-block: 150px;
+    .row {
+        align-items: center;
+    }
+}
