@@ -181,3 +181,10 @@ header {
     }
     
 }
+
+footer {
+    padding-block: 25px;
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+}
