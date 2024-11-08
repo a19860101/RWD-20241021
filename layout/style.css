@@ -223,23 +223,43 @@ header {
 #blog {
     padding-block: 150px;
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(176,229,208,1) 42%, rgba(92,202,238,0.41) 93.6% );
+    .blog-body {
+        position: relative;
+    }
     .container:nth-of-type(even) {
         .blog-body {
-            position: relative;
-            right: -100px;
+            /* right: -100px; */
         }
         .col-md-6:first-of-type{
-            order:2;
+            /* order:2; */
         }
 
         .col-md-6:last-of-type{
-            order:1;
+            /* order:1; */
         }
     }
     .container:nth-of-type(odd){
         .blog-body {
-            position: relative;
-            left: -100px
+            /* left: -100px */
+        }
+    }
+    @media(min-width:768px){
+        .container:nth-of-type(even) {
+            .blog-body {
+                right: -100px;
+            }
+            .col-md-6:first-of-type{
+                order:2;
+            }
+    
+            .col-md-6:last-of-type{
+                order:1;
+            }
+        }
+        .container:nth-of-type(odd){
+            .blog-body {
+                left: -100px
+            }
         }
     }
     .row {
