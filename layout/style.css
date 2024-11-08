@@ -129,11 +129,11 @@ header {
             position: relative;
             right: -100px;
         }
-        .col-6:first-of-type{
+        .col-md-6:first-of-type{
             order:2;
         }
 
-        .col-6:last-of-type{
+        .col-md-6:last-of-type{
             order:1;
         }
     }
