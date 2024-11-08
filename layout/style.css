@@ -21,6 +21,7 @@ nav {
 }
 .mobile-nav {
     display: flex;
+    justify-content: space-between;
 }
 
 .mobile-nav-menu {
@@ -33,7 +34,7 @@ nav {
     left: 0;
     z-index: 99999;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -41,6 +42,12 @@ nav {
     .mobile-nav-link {
         text-decoration: none;
         font-size: 2rem;
+        color: #000;
+    }
+    .mobile-nav-close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
         color: #000;
     }
 }
