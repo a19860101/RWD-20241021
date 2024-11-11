@@ -15,9 +15,16 @@
         .col {
             flex: 1 1 0;
             transition: 500ms;
+            border-radius: 12px;
+            overflow: hidden;
+            /* filter:grayscale(); */
+        }
+        .col:not(:hover){
+            filter:grayscale();
         }
         .col:hover {
             flex: 6 1 0;
+            /* filter:none; */
         }
         img {
             width: 100%;
@@ -30,7 +37,7 @@
     <header>
         <div class="col">
             <img src="https://picsum.photos/id/40/800" alt="">
-        </div>
+        </div> 
         <div class="col">
             <img src="https://picsum.photos/id/50/800" alt="">
         </div>
