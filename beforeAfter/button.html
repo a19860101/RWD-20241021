@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            display: inline-block;
+            padding:10px 30px;
+            text-decoration: none;
+            color: #000;
+            position: relative;
+        }
+        .btn::after,.btn::before {
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            
+            left: 0;
+            top: 0;
+            
+        }
+        .btn::after {
+            background-color: #48a1f4;
+            z-index: -2;
+        }
+        .btn::before {
+            background-color: #d7f448;
+            z-index: -1;
+            transition: 600ms;
+        }
+
+        .btn:hover::before {
+            scale: 1 1;
+        }
+
+        .left::before {
+            scale: 0 1;
+            transform-origin: left;
+        }
+
+        .right::before {
+            scale: 0 1;
+            transform-origin: right;
+        }
+
+        .top::before {
+            scale: 1 0;
+            transform-origin: top;
+        }
+
+        .bottom::before {
+            scale: 1 0;
+            transform-origin: bottom;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#" class="btn left">Left To Right</a>
+    <br><br>
+    <a href="#" class="btn right">Right To Left</a>
+    <br><br>
+    <a href="#" class="btn top">Top To Bottom</a>
+    <br><br>
+    <a href="#" class="btn bottom">Bottom To Top</a>
+
+</body>
+</html>
