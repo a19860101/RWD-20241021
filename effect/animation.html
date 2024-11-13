@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #fa0;
+
+            /* animation: a2 5s; */
+            /* animation-name: fadeOut; */
+            /* animation-duration: 5s; */
+            /* animation-delay: 0s; */
+            /* animation-iteration-count: 1; */
+            /* infinite */
+            /* animation-direction: alternate; */
+            /* normal,reverse, alternate, alternate-reverse */
+            /* animation-fill-mode: forwards; */
+            /* forwards */
+            /* animation-timing-function: steps(5); */
+            /* ease, ease-in, ease-out, ease-in-out, linear, steps() */
+
+            /* animation-play-state: running; */
+            /* pause, running */
+
+            /* animation: ro 2s infinite alternate; */
+            animation: ro 1s linear infinite
+
+        }
+        @keyframes ro {
+            to {
+                rotate: 360deg;
+            }
+        }
+        @keyframes fadeOut {
+            to {
+                scale: 0;
+                opacity: 0;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                scale: 0;
+                opacity: 0;
+            }
+        }
+        @keyframes a1 {
+            from {
+                translate:100px 200px;
+            }
+            to {
+                translate: 400px 100px;
+            }
+        }
+        @keyframes a2 {
+            0%,100% {translate: 0 0}
+            25% {translate: 600px 0}
+            50% {translate: 600px 600px}
+            75% {translate: 0 600px}
+            /* 100% {translate: 0 0} */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
