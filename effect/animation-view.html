@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h1 {
+                font-size: 6rem;
+                animation: a1 linear;
+                animation-timeline: view();
+            }
+        }
+        section:nth-of-type(1){background-color: #ffa8a8;}
+        section:nth-of-type(2){background-color: #fdff87;}
+        section:nth-of-type(3){background-color: #9aff98;}
+        @keyframes a1 {
+            to {
+                font-size: 12rem;
+                rotate: 180deg;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>First</h1>
+    </section>
+    <section>
+        <h1>Seconde</h1>
+    </section>
+    <section>
+        <h1>Third</h1>
+    </section>
+</body>
+</html>
