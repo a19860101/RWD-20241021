@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 50px;
+            background-color: #222;
+        }
+        .box {
+            width: 200px;
+            background-color: #ccc;
+            padding: 10px;
+            position: relative;
+
+        }
+        @property --angle {
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
+        }
+        .box::after {
+            content:'';
+            position: absolute;
+            inset:-5px;
+            /* background-color: #d64a4a; */
+            /* background-image: linear-gradient(red,blue); */
+            background-image: conic-gradient(from var(--angle),red 10%, transparent 50%, blue);
+            z-index: -1 ;
+
+            animation: spin 1s infinite linear;
+        }
+        .box::before {
+            content:'';
+            position: absolute;
+            inset:-10px;
+            background-image: conic-gradient(from var(--angle),red 10%, transparent 50%, blue);
+            z-index: -1 ;
+            filter:blur(12px);
+            animation: spin 1s infinite linear;
+        }
+        @keyframes spin {
+            from {--angle: 0deg}
+            to {--angle: 360deg}
+        }
+        /* .overlay {
+            position: absolute;
+            inset:-100px;
+            margin: auto;
+            background-color: crimson;
+        } */
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="box">
+        <h2>title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, aperiam?</p>
+    </div>
+</body>
+</html>
