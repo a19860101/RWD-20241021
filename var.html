@@ -12,6 +12,7 @@
 
             --spacing: 15px;
         }
+
         .txt {
             font-size: 1rem;
             background-color: var(--clr-orange);
@@ -19,10 +20,51 @@
         h1 {
             color: var(--clr-orange);
         }
+        .container {
+            width: min(1200px,95%);
+            display: flex;
+            margin-inline: auto;
+
+        }
+        .box {
+            --bg-clr:var(--clr-blue);
+            background-color: var(--bg-clr);
+            padding: var(--spacing);
+        }
+        .box:nth-of-type(1){
+            --bg-clr:var(--clr-orange);
+        }
+        .box:nth-of-type(3){
+            --bg-clr:#098;
+        }
+
+        /* body {
+            background-color: var(--bg-clr);
+        } */
     </style>
 </head>
 <body>
     <h1>變數</h1>
     <div class="txt">hello</div>
+    <div class="container">
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sit voluptatem consectetur tenetur reprehenderit saepe possimus quae delectus quod minima.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sit voluptatem consectetur tenetur reprehenderit saepe possimus quae delectus quod minima.
+            </p>
+        </div>
+        <div class="box">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sit voluptatem consectetur tenetur reprehenderit saepe possimus quae delectus quod minima.
+            </p>
+        </div>
+    </div>
 </body>
 </html>
