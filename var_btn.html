@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --clr-gray:#ccc;
+            --clr-blue:#4ccdfc;
+            --clr-red:#de4444;
+
+            --clr-green: #4fff23;
+            --clr-green-100:hsl(from var(--clr-green) h s calc(l - 0));
+            --clr-green-200:hsl(from var(--clr-green) h s calc(l - 8));
+            --clr-green-300:hsl(from var(--clr-green) h s calc(l - 16));
+            --clr-green-400:hsl(from var(--clr-green) h s calc(l - 24));
+            --clr-green-500:hsl(from var(--clr-green) h s calc(l - 32));
+            --clr-green-600:hsl(from var(--clr-green) h s calc(l - 40));
+            --clr-green-700:hsl(from var(--clr-green) h s calc(l - 48));
+            --clr-green-800:hsl(from var(--clr-green) h s calc(l - 56));
+            --clr-green-900:hsl(from var(--clr-green) h s calc(l - 64));
+
+        }
+        .btn {
+            /* --btn-clr: #ccc; */
+            display: inline-block;
+            padding: 10px 30px;
+            text-decoration: none;
+            color: #000;
+            border-radius: 5px;
+            font-size: 1rem;
+            border: 0;
+            background-color: var(--btn-clr,#ccc);
+            background-color: var(--btn-clr,var(--clr-gray));
+        }
+        .btn-red {
+            /* --btn-clr:red; */
+            --btn-clr:var(--clr-red);
+        }
+        .btn-blue {
+            /* --btn-clr: blue; */
+            --btn-clr: var(--clr-blue);
+        }
+
+        body {
+            /* background-color: rgb(from #3cd598 calc(r + 100) g b); */
+            background-color: hsl(from #876 h s calc(l - 20));
+            /* background-color: hsl(from #876 h s l); */
+            /* background-color: rgb(255,100,120); */
+            /* 
+                rgb
+                hsl:hue saturation lightness
+                hwb:hue white black
+                oklab:
+                oklch:
+            */
+        }
+        .box:nth-of-type(1){background-color: var(--clr-green-100);}
+        .box:nth-of-type(2){background-color: var(--clr-green-200);}
+        .box:nth-of-type(3){background-color: var(--clr-green-300);}
+        .box:nth-of-type(4){background-color: var(--clr-green-400);}
+        .box:nth-of-type(5){background-color: var(--clr-green-500);}
+        .box:nth-of-type(6){background-color: var(--clr-green-600);}
+        .box:nth-of-type(7){background-color: var(--clr-green-700);}
+        .box:nth-of-type(8){background-color: var(--clr-green-800);}
+        .box:nth-of-type(9){background-color: var(--clr-green-900);}
+    </style>
+</head>
+<body>
+    <div class="box">asdf</div>
+    <div class="box">asdf</div>
+    <div class="box">asdf</div>
+    <div class="box">asdf</div>
+    <div class="box">asdf</div>
+    <div class="box">asdf</div>
+    <div class="box">asdf</div>
+    <div class="box">asdf</div>
+    <div class="box">asdf</div>
+    <div class="box">asdf</div>
+    <div class="box">asdf</div>
+    <a href="#" class="btn">link</a>
+    <a href="#" class="btn btn-red">link</a>
+    <a href="#" class="btn btn-blue">link</a>
+</body>
+</html>
