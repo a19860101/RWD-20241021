@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            width: 800px;
+            height: 400px;
+            margin-inline: auto;
+
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+
+            /* place-content: center; */
+
+            /* justify-items: center; */
+            /* align-items: center; */
+            place-items: center;
+        }
+        .cover {
+            grid-column: 1 / -1;
+            grid-row: 1 / -1;
+        }
+        .caption {
+            grid-column: 1 / -1;
+            grid-row: 1 / -1;
+
+            /* place-self: center; */
+
+            width: 400px;
+            text-align: center;
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 12, 12, 0.507);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="cover"><img src="https://picsum.photos/id/40/800/400" alt=""></div>
+        <div class="caption">
+            <h1>title</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita quidem repellendus sit similique animi repudiandae eveniet exercitationem aspernatur? Maiores, ipsa. Voluptatum eveniet incidunt suscipit facilis facere optio magnam expedita tempora.
+            </p>
+        </div>
+    </header>
+</body>
+</html>
