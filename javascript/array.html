@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let test = new Array();
+        // test[陣列索引值]
+        // test[0] = 'Apple';
+        // test[1] = 'Banana';
+
+        // let test = new Array('Apple','Banana');
+
+        // 陣列實字
+        // let test = ['Apple','Banana'];
+        // console.log(test);
+
+        const foods = ['牛肉麵','滷肉飯','雞排','珍珠奶茶'];
+        // console.log(foods);
+        // console.log(foods[0]);
+        // console.log(foods[1]);
+        // console.log(foods[2]);
+
+        console.log(foods.length);
+
+        for(let i=0;i<foods.length;i++){
+            console.log(foods[i])
+        }
+
+        // for...of 迴圈資料
+        for(let f of foods){
+            console.log(f);
+        }
+
+        // for...in 迴圈索引值
+        for(let i in foods){
+            console.log(i);
+            console.log(foods[i])
+        }
+    </script>
+</body>
+</html>

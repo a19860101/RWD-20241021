@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function declaration 函式宣告式
+        console.log(test());
+        // 提升性
+        function test(){
+            return 'test';
+        }
+
+        
+
+        // function expression 函式表達式
+        
+        const foo = function(){
+            return 'foo';
+        }
+        console.log(foo());
+
+
+        const jp_tw = function(dollar,exc=0.21){
+            return dollar*exc;
+        }
+        // console.log(jp_tw(10000,0.215));
+        // let result = jp_tw(10000,0.215);
+        let result = jp_tw(60000,0.23);
+        console.log(result);
+
+        function area(w,h){
+            return w*h;
+        }
+        console.log(area(123,90));
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //var vs let,const
+        // var可以重複宣告；let,const不可重複宣告
+        // var a = 100;
+        // var a = 'hello';
+        // console.log(a);
+
+        // let b = 100;
+        // let b = 'hello';
+        // console.log(b);
+
+        // const c = 100;
+        // const c = 'hello';
+        // console.log(c);
+
+        // var是function scope，let,const是block scope
+        var a = 200;
+        let a2 = 123;
+        function foo(){
+            var a = 100;
+            let a2 = 321;
+        }
+        console.log(a2);
+
+        var b = 123;
+        let b2 = 999;
+        if(a){
+            var b = 99;
+            let b2 = 9999;
+            console.log(b2);
+        }
+        console.log(b2);
+    </script>
+</body>
+</html>
