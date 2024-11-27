@@ -24,22 +24,45 @@
         // console.log(foods[1]);
         // console.log(foods[2]);
 
-        console.log(foods.length);
+        // console.log(foods.length);
 
-        for(let i=0;i<foods.length;i++){
-            console.log(foods[i])
-        }
+        // for(let i=0;i<foods.length;i++){
+        //     console.log(foods[i])
+        // }
 
         // for...of 迴圈資料
-        for(let f of foods){
-            console.log(f);
-        }
+        // for(let f of foods){
+        //     console.log(f);
+        // }
 
         // for...in 迴圈索引值
-        for(let i in foods){
-            console.log(i);
-            console.log(foods[i])
-        }
+        // for(let i in foods){
+        //     console.log(i);
+        //     console.log(foods[i])
+        // }
+
+        // push() 陣列後方新增資料
+        foods.push('test');
+
+        // pop() 移除陣列最後一筆資料
+        foods.pop()
+
+        // unshift() 陣列前方新增資料
+        foods.unshift('test');
+
+        // shift() 移除陣列第一筆資料
+        foods.shift();
+
+        // toString() 陣列轉字串
+        let foods_string = foods.toString();
+
+        let foods_join = foods.join('、');
+        console.log(foods_join);
+
+        // split()字串轉陣列
+        let txt = 'hello,world!';
+        let txt_array = txt.split(',');
+        console.log(txt_array)
     </script>
 </body>
 </html>

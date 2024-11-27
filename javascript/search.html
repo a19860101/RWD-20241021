@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <ul id="menu">
+        <li class="item">紅茶</li>
+        <li class="item">綠茶</li>
+        <li class="item">奶茶</li>
+    </ul>
+    <script>
+        // getElement
+        // let menu = document.getElementById('menu');
+        // console.log(menu);
+        // let items = document.getElementsByClassName('item');
+        // console.log(items[0]);
+        // let lis = document.getElementsByTagName('li')[0];
+        // console.log(lis);
+
+        // querySelector
+        let menu = document.querySelector('#menu');
+        console.log(menu);
+
+        let items = document.querySelectorAll('.item');
+        console.log(items);
+        console.log(items[1]);
+        let item = document.querySelector('.item');
+        console.log(item);
+
+        let lis = document.querySelectorAll('li');
+        console.log(lis)
+        let li = document.querySelector('li');
+        console.log(li)
+    </script>
+</body>
+</html>
