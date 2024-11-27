@@ -16,7 +16,8 @@
         onkeydown
         onkeypress
     -->
-    <input type="text" id="input" onkeyup="filter_item()">
+    <!-- <input type="text" id="input" onkeyup="filter_item()"> -->
+    <input type="text" id="input" >
     <ul id="menu">
         <li class="item" onclick="test()">熟成紅茶</li>
         <li class="item">立春紅茶</li>
@@ -47,7 +48,7 @@
         function test(){
             console.log(document.querySelector('.item').textContent);
         }
-        function filter_item(){
+        input.onkeyup = function(){
             for(let item of items){
                 if(item.textContent.indexOf(input.value) > -1){
                     item.style.display = '';
@@ -56,6 +57,16 @@
                 }
             }
         }
+        // function filter_item(){
+        //     for(let item of items){
+        //         if(item.textContent.indexOf(input.value) > -1){
+        //             item.style.display = '';
+        //         }else {
+        //             item.style.display = 'none'
+        //         }
+        //     }
+        // }
+        
         let t = 'hello';
         console.log(t.indexOf('p'));
         // let arr = ['apple','banana'];
