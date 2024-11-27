@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery {
+            width: 600px;
+            margin: auto;
+            img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="https://picsum.photos/id/98/600" alt="芒草" class="pic">
+    </div>
+    <script>
+        let pic = document.querySelector('.pic');
+        console.log(pic);
+        pic.onclick = function(){
+            // alert('hello');
+            console.log(this.getAttribute('src'));
+            this.setAttribute('src','https://picsum.photos/id/40/600');
+            this.setAttribute('alt','cat');
+
+        }
+        // document.querySelector('.pic').onclick = function(){
+        //     alert('hello');
+        // }`
+    </script>
+</body>
+</html>
