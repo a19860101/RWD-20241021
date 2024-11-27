@@ -6,7 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="input" onclick="filter_item()">
+    <!-- 
+        onclick
+        onmouseover
+        onmouseout
+        onmousemove
+
+        onkeyup
+        onkeydown
+        onkeypress
+    -->
+    <input type="text" id="input" onkeyup="filter_item()">
     <ul id="menu">
         <li class="item" onclick="test()">熟成紅茶</li>
         <li class="item">立春紅茶</li>
@@ -23,8 +33,17 @@
     </ul>
     <script>
         let input = document.querySelector('#input');
+        let items = document.querySelectorAll('.item');
 
-        console.log(input);
+        // for(let i=0;i<items.length;i++){
+        //     console.log(items[i].textContent);
+        // }
+
+        for(let item of items){
+            console.log(item.textContent);
+        }
+
+        console.log(items);
         function test(){
             console.log(document.querySelector('.item').textContent);
         }
@@ -32,6 +51,7 @@
             console.log(input.value);
 
         }
+
 
 
         // getElement
