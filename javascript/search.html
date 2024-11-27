@@ -6,13 +6,34 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="input">
+    <input type="text" id="input" onclick="filter_item()">
     <ul id="menu">
-        <li class="item">紅茶</li>
-        <li class="item">綠茶</li>
-        <li class="item">奶茶</li>
+        <li class="item" onclick="test()">熟成紅茶</li>
+        <li class="item">立春紅茶</li>
+        <li class="item">太妃紅茶</li>
+        <li class="item">胭脂紅茶</li>
+        <li class="item">雪藏紅茶</li>
+        <li class="item">春芽綠茶</li>
+        <li class="item">春梅冰茶</li>
+        <li class="item">雪花冷露</li>
+        <li class="item">熟成冷露</li>
+        <li class="item">春芽冷露</li>
+        <li class="item">冷露歐蕾</li>
+        <li class="item">熟成歐蕾</li>
     </ul>
     <script>
+        let input = document.querySelector('#input');
+
+        console.log(input);
+        function test(){
+            console.log(document.querySelector('.item').textContent);
+        }
+        function filter_item(){
+            console.log(input.value);
+
+        }
+
+
         // getElement
         // let menu = document.getElementById('menu');
         // console.log(menu);
@@ -22,19 +43,21 @@
         // console.log(lis);
 
         // querySelector
-        let menu = document.querySelector('#menu');
-        console.log(menu);
+        // let menu = document.querySelector('#menu');
+        // console.log(menu);
 
-        let items = document.querySelectorAll('.item');
-        console.log(items);
-        console.log(items[1]);
-        let item = document.querySelector('.item');
-        console.log(item);
+        // let items = document.querySelectorAll('.item');
+        // console.log(items);
+        // console.log(items[1]);
+        // let item = document.querySelector('.item');
+        // console.log(item);
 
-        let lis = document.querySelectorAll('li');
-        console.log(lis)
-        let li = document.querySelector('li');
-        console.log(li)
+        // let lis = document.querySelectorAll('li');
+        // console.log(lis);
+        // let li = document.querySelector('li');
+        // console.log(li);
+
+
     </script>
 </body>
 </html>
