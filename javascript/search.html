@@ -48,10 +48,18 @@
             console.log(document.querySelector('.item').textContent);
         }
         function filter_item(){
-            console.log(input.value);
-
+            for(let item of items){
+                if(item.textContent.indexOf(input.value) > -1){
+                    item.style.display = '';
+                }else {
+                    item.style.display = 'none'
+                }
+            }
         }
-
+        let t = 'hello';
+        console.log(t.indexOf('p'));
+        // let arr = ['apple','banana'];
+        // console.log(arr.indexOf('banana'));
 
 
         // getElement
