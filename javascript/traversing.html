@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Traversing</h1><!-- asdf -->
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, perferendis dolore ex ratione aliquid quaerat at porro aliquam dolores molestiae eveniet eos necessitatibus ducimus tempora asperiores nisi ipsa repellat voluptates.
+        </p>
+        <div class="nav">
+            <a href="#" class="nav-logo">Logo</a>
+            <ul>
+                <li><a href="#">link1</a></li>
+                <li><a href="#">link2</a></li>
+                <li><a href="#">link3</a></li>
+                <li><a href="#">link4</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // dom document object model 文件物件模型
+
+        let target = document.querySelector('#title');
+
+        // 父元素
+        console.log(target.parentElement);
+        // 父節點
+        console.log(target.parentNode);
+
+        // 下一個同輩元素
+        console.log(target.nextElementSibling);
+        // 上一個同輩元素
+        console.log(target.previousElementSibling);
+        
+        // 下一個同輩節點
+        console.log(target.nextSibling);
+        // 上一個同輩節點
+        console.log(target.previousSibling);
+
+        let nav = document.querySelector('.nav');
+        // 子元素
+        console.log(nav.children);
+
+        // 子節點
+        console.log(nav.childNodes)
+
+        // 節點：文字節點（包含換行）、元素節點、註解節點
+    </script>
+</body>
+</html>
