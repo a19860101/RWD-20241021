@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let user = new Object;
+        // user.name = 'john';
+        // user.email = 'asdf@gmail.com';
+
+        // let user = {
+        //     name: 'john',
+        //     email: 'asdf@gmail.com'
+        // }
+        // console.log(user);
+
+        let user = {
+            name: 'John',
+            skill: ['HTML','CSS','JAVASCRIPT'],
+            test: {
+                m1: 'asdf',
+                m2: 'asdfasdf',
+            },
+            foo: function(){
+                return 'hello'
+            }
+        }
+        console.log(user.name);
+        console.log(user.skill[1]);
+        console.log(user.test.m2);
+        console.log(user.foo());
+        let foods = [
+            {
+                name: '紅茶',
+                price: '25'
+            },
+            {
+                name: '奶茶',
+                price: '50'
+            }
+        ];
+        console.log(foods[1].price)
+    </script>
+</body>
+</html>
