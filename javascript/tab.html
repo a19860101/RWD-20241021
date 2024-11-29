@@ -17,6 +17,7 @@
             text-decoration: none;
             color: #eee;
             padding: 8px 30px;
+            transition: 500ms;
         }
         .tab-link.active {
             background-color: #ccc;
@@ -26,6 +27,7 @@
             padding: 15px;
             background-color: #ccc;
             display: none;
+            transition: 500ms;
         }
         .tab-panel.active {
             display: block;
@@ -62,6 +64,10 @@
         let tabLinks = document.querySelectorAll('.tab-link');
         for(let tl of tabLinks){
             tl.onclick = function(){
+
+                document.querySelector('.tab-link.active').classList.remove('active');
+                this.classList.add('active');
+
                 let href = this.getAttribute('href');
                 let panel = this.dataset.panel;
                 document.querySelector('.tab-panel.active').classList.remove('active');
