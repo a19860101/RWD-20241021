@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab {
+            width: 600px;
+            margin: auto;
+        }
+        .tab-nav {
+            display: flex;
+            background-color: #222;
+        }
+        .tab-link {
+            text-decoration: none;
+            color: #eee;
+            padding: 8px 30px;
+        }
+        .tab-link.active {
+            background-color: #ccc;
+            color: #222;
+        }
+        .tab-panel {
+            padding: 15px;
+            background-color: #ccc;
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab-nav">
+            <a href="#tab-a" data-panel="#tab-a" class="tab-link active">Tab A</a>
+            <a href="#tab-b" data-panel="#tab-b" class="tab-link">Tab B</a>
+            <a href="#tab-c" data-panel="#tab-c" class="tab-link">Tab C</a>
+        </div>
+        <div class="tab-panel active" id="tab-a">
+            <h2>tab a</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos doloremque dolorem aut ipsum quia inventore, quas voluptates accusantium. Numquam repellendus ex esse minima aut inventore doloremque ea, fugiat exercitationem magnam?
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-b">
+            <h2>tab B</h2>
+            <p>
+                例如廣泛一對終於保險增長部落格挑戰過了期待有一本來吃螺絲有意，居住打造你能並不是，市場人大本類，躺在開通這些受傷原文擁有現場共同通用可見人間幫我，普遍儘快清除股東概念平靜也有複雜，印象本文我一文件保存，造型感謝寶寶浪漫課程神經商家正好道理我是一定，白色不。
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-c">
+            <h2>tab C</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quis, rerum quae rem nostrum sint perspiciatis soluta quia repellat doloribus!
+            </p>
+        </div>
+    </div>
+    <script>
+        let tabLinks = document.querySelectorAll('.tab-link');
+        for(let tl of tabLinks){
+            tl.onclick = function(){
+                console.log(this);
+            }
+        }
+    </script>
+</body>
+</html>

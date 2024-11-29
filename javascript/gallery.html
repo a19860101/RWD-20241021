@@ -12,23 +12,43 @@
                 width: 100%;
             }
         }
+        .thumbs {
+            display: flex;
+            .thumb {
+                width: 20%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="gallery">
-        <img src="https://picsum.photos/id/98/600" alt="芒草" class="pic">
+        <img src="https://picsum.photos/id/98/600" alt="" class="pic">
+        <div class="thumbs">
+            <img src="https://picsum.photos/id/98/600" alt="" class="thumb">
+            <img src="https://picsum.photos/id/18/600" alt="" class="thumb">
+            <img src="https://picsum.photos/id/28/600" alt="" class="thumb">
+            <img src="https://picsum.photos/id/38/600" alt="" class="thumb">
+            <img src="https://picsum.photos/id/48/600" alt="" class="thumb">
+        </div>
     </div>
     <script>
-        let pic = document.querySelector('.pic');
-        console.log(pic);
-        pic.onclick = function(){
-            // alert('hello');
-            console.log(this.getAttribute('src'));
-            this.setAttribute('src','https://picsum.photos/id/40/600');
-            this.setAttribute('alt','cat');
-
+        let thumbs = document.querySelectorAll('.thumb');
+        for(let t of thumbs){
+            t.onclick = function(){
+                let newPic = this.getAttribute('src');
+                document.querySelector('.pic').setAttribute('src',newPic);
+            }
         }
-        // document.querySelector('.pic').onclick = function(){
+        // let pic = document.querySelector('.pic');
+        // console.log(pic);
+        // pic.onclick = function(){
+        //     // alert('hello');
+        //     console.log(this.getAttribute('src'));
+        //     this.setAttribute('src','https://picsum.photos/id/40/600');
+        //     this.setAttribute('alt','cat');
+
+        // }
+        // // document.querySelector('.pic').onclick = function(){
         //     alert('hello');
         // }`
     </script>
