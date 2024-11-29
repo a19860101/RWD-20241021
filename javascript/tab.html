@@ -8,6 +8,8 @@
         .tab {
             width: 600px;
             margin: auto;
+
+            position: relative;
         }
         .tab-nav {
             display: flex;
@@ -26,11 +28,18 @@
         .tab-panel {
             padding: 15px;
             background-color: #ccc;
-            display: none;
             transition: 500ms;
+            /* display: none; */
+
+            opacity: 0;
+            position: absolute;
+            visibility: hidden;
         }
         .tab-panel.active {
-            display: block;
+            /* display: block; */
+
+            opacity: 1;
+            visibility: visible;
         }
     </style>
 </head>
@@ -40,6 +49,7 @@
             <a href="#tab-a" data-panel="#tab-a" data-msg="aaa" class="tab-link active">Tab A</a>
             <a href="#tab-b" data-panel="#tab-b" data-msg="bbb" class="tab-link">Tab B</a>
             <a href="#tab-c" data-panel="#tab-c" data-msg="ccc" class="tab-link">Tab C</a>
+            <a href="#tab-d" data-panel="#tab-d" data-msg="ddd" class="tab-link">Tab D</a>
         </div>
         <div class="tab-panel active" id="tab-a">
             <h2>tab a</h2>
@@ -55,6 +65,12 @@
         </div>
         <div class="tab-panel" id="tab-c">
             <h2>tab C</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quis, rerum quae rem nostrum sint perspiciatis soluta quia repellat doloribus!
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-d">
+            <h2>tab DDDD</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quis, rerum quae rem nostrum sint perspiciatis soluta quia repellat doloribus!
             </p>
