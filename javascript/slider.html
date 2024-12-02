@@ -117,7 +117,18 @@
         let sliderItems = document.querySelectorAll('.slider-item');
         let total = sliderItems.length;
         let currentIndex = 0;
-        let timeout = 1000;
+        let timeout = 10000;
+
+        let next = document.querySelector('.slider-next');
+        let prev = document.querySelector('.slider-prev');
+
+        next.onclick =function(){
+            slider();
+        }
+
+        prev.onclick = function(){
+            slider('prev');
+        }
 
         function slider(direction){
             // if(currentIndex === total - 1){
