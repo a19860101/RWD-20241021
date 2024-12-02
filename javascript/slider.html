@@ -117,16 +117,27 @@
         let sliderItems = document.querySelectorAll('.slider-item');
         let total = sliderItems.length;
         let currentIndex = 0;
-        let timeout = 3000;
+        let timeout = 1000;
 
-        function slider(){
+        function slider(direction){
             // if(currentIndex === total - 1){
             //     currentIndex = 0;
             // }else{
             //     currentIndex++;
             // }
+            if(direction === 'prev'){
+                currentIndex = currentIndex === 0 ? total : currentIndex;
+                currentIndex = (currentIndex - 1) % total;
+            }else{
+                currentIndex = (currentIndex + 1) % total;
+            }
 
-            currentIndex = (currentIndex + 1) % total;
+            // if(currentIndex === 0){
+            //     currentIndex = total
+            // }
+            // currentIndex = currentIndex === 0 ? total : currentIndex;
+            // currentIndex = (currentIndex - 1) % total;
+            // currentIndex = (currentIndex + 1) % total;
 
             switchImg();
             console.log(currentIndex);
