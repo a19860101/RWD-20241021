@@ -116,7 +116,21 @@
     <script>
         let sliderItems = document.querySelectorAll('.slider-item');
         let total = sliderItems.length;
-        console.log(total)
+        let currentIndex = 0;
+        let timeout = 1000;
+
+        function slider(){
+            // if(currentIndex === total - 1){
+            //     currentIndex = 0;
+            // }else{
+            //     currentIndex++;
+            // }
+
+            currentIndex = (cunrretIndex + 1) % total;
+
+            console.log(currentIndex)
+        }
+        setInterval(slider, timeout);
     </script>
 </body>
 
