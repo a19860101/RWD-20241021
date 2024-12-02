@@ -158,6 +158,13 @@
             sliderItems[currentIndex].classList.add('active');
         }
         setInterval(slider, timeout);
+
+        for(let i=0;i<total;i++){
+            let dot = document.createElement('span');
+            document.querySelector('.slider-dots').append(dot);
+            dot.classList.add('slider-dot');
+            dot.dataset.index = i;
+        }
     </script>
 </body>
 
