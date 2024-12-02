@@ -117,7 +117,7 @@
         let sliderItems = document.querySelectorAll('.slider-item');
         let total = sliderItems.length;
         let currentIndex = 0;
-        let timeout = 10000;
+        let timeout = 3000;
 
         let next = document.querySelector('.slider-next');
         let prev = document.querySelector('.slider-prev');
@@ -151,12 +151,14 @@
             // currentIndex = (currentIndex + 1) % total;
 
             switchImg();
+            switchDot();
+            resetTimer()
         }
         function switchImg(){
             document.querySelector('.slider-item.active').classList.remove('active');
             sliderItems[currentIndex].classList.add('active');
         }
-        setInterval(slider, timeout);
+        let timer = setInterval(slider, timeout);
 
         for(let i=0;i<total;i++){
             let dot = document.createElement('span');
@@ -165,15 +167,27 @@
             dot.dataset.index = i;
         }
 
-        let dots = document.querySelectorAll('.slider-dot');
+        function switchDot(){
+            document.querySelector('.slider-dot.active').classList.remove('active');
+            dots[currentIndex].classList.add('active');
+        }
 
+        let dots = document.querySelectorAll('.slider-dot');
+        dots[0].classList.add('active');
         for(let dot of dots){
             dot.onclick = function(){
                 // console.log(this.dataset.index);
                 currentIndex = Number(this.dataset.index);
                 console.log(currentIndex)
                 switchImg();
+                switchDot();
+                resetTimer()
             }
+        }
+
+        function resetTimer(){
+            clearInterval(timer);
+            timer = setInterval(slider, timeout);
         }
     </script>
 </body>
