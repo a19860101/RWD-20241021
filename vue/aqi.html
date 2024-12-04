@@ -5,11 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
+    <style>
+        .container {
+            width: min(1200px,95%);
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap:30px;
+        }
+        .box {
+            background-color: #ccc;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        {{aqi}}
+        <div class="container">
+            <div class="box" v-for="d of aqi">
+                <h3>{{d.county}}</h3>
+                <div class="sitename">站點:{{d.sitename}}</div>
+                <div>AQI:{{d.aqi}}</div>
+                <div>二氧化硫:{{d.so2}}</div>
+                <div>二氧化氮{{d.no2}}</div>
+            </div>
+        </div>
     </div>
     <script>
         Vue.createApp({
