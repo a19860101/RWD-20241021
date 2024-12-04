@@ -14,8 +14,26 @@
         .then(data=>{
             console.log(data.records)
             let con = document.querySelector('.container');
-            for(let aqi of data.records){
-                con.append(aqi.county,aqi.aqi)
+            for(let d of data.records){
+                
+
+                let county = document.createElement('div');
+                county.classList.add('county');
+                county.append(d.county);
+
+                let aqi = document.createElement('div');
+                aqi.classList.add('aqi');
+                aqi.append(d.aqi);
+
+                let status = document.createElement('div');
+                status.classList.add('status');
+                status.append(d.status);
+
+                let box = document.createElement('div');
+                box.classList.add('box');
+                box.append(county,aqi,status)
+                
+                con.append(box)
             }
         })
     </script>
