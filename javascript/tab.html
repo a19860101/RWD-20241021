@@ -78,18 +78,43 @@
     </div>
     <script>
         let tabLinks = document.querySelectorAll('.tab-link');
+        // for(let tl of tabLinks){
+        //     tl.onclick = (e) => {
+        //         // console.log(this)
+        //         console.log(e.target)
+        //         document.querySelector('.tab-link.active').classList.remove('active');
+        //         e.target.classList.add('active');
+
+        //         let href = e.target.getAttribute('href');
+        //         let panel = e.target.dataset.panel;
+        //         document.querySelector('.tab-panel.active').classList.remove('active');
+        //         document.querySelector(href).classList.add('active');
+        //     }
+        // }
         for(let tl of tabLinks){
-            tl.onclick = function(){
+            tl.onclick = function(e){
 
                 document.querySelector('.tab-link.active').classList.remove('active');
                 this.classList.add('active');
 
-                let href = this.getAttribute('href');
-                let panel = this.dataset.panel;
+                let href = e.target.getAttribute('href');
+                let panel = e.target.dataset.panel;
                 document.querySelector('.tab-panel.active').classList.remove('active');
                 document.querySelector(href).classList.add('active');
             }
         }
+        // for(let tl of tabLinks){
+        //     tl.onclick = function(){
+
+        //         document.querySelector('.tab-link.active').classList.remove('active');
+        //         this.classList.add('active');
+
+        //         let href = this.getAttribute('href');
+        //         let panel = this.dataset.panel;
+        //         document.querySelector('.tab-panel.active').classList.remove('active');
+        //         document.querySelector(href).classList.add('active');
+        //     }
+        // }
     </script>
 </body>
 </html>

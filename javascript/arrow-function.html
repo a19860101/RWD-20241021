@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const foo = function(){
+        //     return 'foo';
+        // }
+        
+        const foo = () => {
+            return 'foo';
+        }
+
+        const foo2 = x => {
+            return x;
+        }
+
+        const foo3 = () => 'foo3'
+
+        const foo4 = x => x;
+        
+        
+
+        // console.log(foo4(999))
+        const obj = {
+            name: 'john',
+            mail: 'asdf@gmail.com',
+            active: function(){
+                return this;
+            },
+            arrow: ()=>{
+                return this;
+            }
+        }
+
+        console.log(obj.arrow());
+    </script>
+</body>
+</html>
