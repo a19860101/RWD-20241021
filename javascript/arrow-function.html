@@ -23,9 +23,15 @@
 
         const foo4 = x => x;
         
+        const foo5 = () =>
+            ({
+                error: 0,
+                status: 'success'
+            })
+        
         
 
-        // console.log(foo4(999))
+        console.log(foo5())
         const obj = {
             name: 'john',
             mail: 'asdf@gmail.com',
@@ -37,7 +43,7 @@
             }
         }
 
-        console.log(obj.arrow());
+        // console.log(obj.arrow());
     </script>
 </body>
 </html>
