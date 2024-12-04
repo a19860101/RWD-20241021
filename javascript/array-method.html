@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const foods = ['牛肉麵','滷肉飯','雞排','珍珠奶茶'];
+        // forEach
+        foods.forEach(function(data,idx){
+            console.log(data,idx);
+        })
+
+
+        const f = [
+            {
+                name: '牛肉麵',
+                price: 1200
+            },
+            {
+                name: '乳肉慢',
+                price: 80
+            },
+            {
+                name: '雞排',
+                price: 120
+            }
+        ]
+
+        // map
+        const price = f.map(function(data,idx){
+            return data.price;
+        })
+        const food_name = f.map(data=>data.name)
+        console.log(food_name);
+    </script>
+</body>
+</html>

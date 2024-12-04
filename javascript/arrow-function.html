@@ -11,18 +11,22 @@
         //     return 'foo';
         // }
         
+        // function去掉，並在小括號大括號之間加上箭頭(=>)
         const foo = () => {
             return 'foo';
         }
 
+        // 當只有一個參數時，可以將小括號去掉
         const foo2 = x => {
             return x;
         }
 
+        // 當動作只有return時，可以將return與大括號去掉
         const foo3 = () => 'foo3'
 
         const foo4 = x => x;
         
+        // 當return為物件時，要在物件外圍加上小括號，確保物件執行
         const foo5 = () =>
             ({
                 error: 0,
