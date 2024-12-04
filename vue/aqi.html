@@ -19,6 +19,15 @@
             text-align: center;
             border-radius: 8px;
         }
+        .aqi-danger {
+            background-color: #f00;
+        }
+        .aqi-bad {
+            background-color: orange;
+        }
+        .aqi-good {
+            background-color: #0af;
+        }
     </style>
 </head>
 <body>
@@ -27,9 +36,13 @@
             <div class="box" v-for="d of aqi">
                 <h3>{{d.county}}</h3>
                 <div class="sitename">站點:{{d.sitename}}</div>
-                <div>AQI:{{d.aqi}}</div>
+                
+                <div v-if="d.aqi > 100" class="aqi-danger">AQI:{{d.aqi}}</div>
+                <div v-else-if="d.aqi > 50" class="aqi-bad">AQI:{{d.aqi}}</div>
+                <div v-else class="aqi-good">AQI:{{d.aqi}}</div>
+                
                 <div>二氧化硫:{{d.so2}}</div>
-                <div>二氧化氮{{d.no2}}</div>
+                <div>二氧化氮:{{d.no2}}</div>
             </div>
         </div>
     </div>
