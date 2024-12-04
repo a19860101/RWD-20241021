@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
         .container {
             width: min(1200px,95%);
@@ -19,9 +21,13 @@
             text-align: center;
             border-radius: 8px;
         }
-        img {
-            width: 100%;
-            aspect-ratio: 1 / 1;
+        .album_file {
+            aspect-ratio: 1 / 1; 
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     </style>
 </head>
@@ -29,9 +35,14 @@
     <div id="app">
         <div class="container">
             <div class="box" v-for="animal of animals">
-                <img v-bind:src="animal.album_file" alt="" >
-                <div>{{animal.shelter_name}}</div>
+                <div class="album_file">
+                    <img v-bind:src="animal.album_file" alt="" >
+                </div>
+                <div class="font-bold text-xl">{{animal.shelter_name}}</div>
+                <div>{{animal.shelter_address}}</div>
+                <div>{{animal.shelter_tel}}</div>
                 <div>{{animal.animal_Variety}}</div>
+                <div>資料更新時間{{animal.cDate}}</div>
             </div>
         </div>
     </div>
