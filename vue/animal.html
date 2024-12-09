@@ -33,8 +33,8 @@
 </head>
 <body>
     <div id="app">
-        <select name="place" id="place" @change="getPlace()" class="border border-zinc-700 p-2">
-            <option>--請選擇收容所--</option>
+        <select name="place" id="place" v-model="selectedPlace" class="border border-zinc-700 p-2">
+            <option disabled value="">--請選擇收容所--</option>
             <template v-for="place in uniquePlace">
                 <option v-bind:value="place">{{place}}</option>
             </template>
@@ -62,11 +62,11 @@
                 }
             },
             methods:{
-                getPlace(){
-                    let p = document.querySelector('#place').value;
-                    // console.log(p)
-                    this.selectedPlace = p;
-                }
+                // getPlace(){
+                //     let p = document.querySelector('#place').value;
+                //     // console.log(p)
+                //     this.selectedPlace = p;
+                // }
             },
             computed:{
                 place(){

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <a v-bind:href="link">Yahoo</a>
+        <br>
+        <input type="text" v-model="link">
+        <br>
+        {{link}}
+        <br>
+        <select name="" id="" v-model="selected">
+            <option disabled value="">請選擇</option>
+            <option value="AAA">AAA</option>
+            <option value="BBB">BBB</option>
+            <option value="CCC">CCC</option>
+        </select>
+        <br>
+        {{selected}}
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    link:'https://tw.yahoo.com',
+                    selected:''
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
