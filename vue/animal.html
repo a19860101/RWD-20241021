@@ -43,7 +43,8 @@
         <div class="container">
             <div class="box" v-for="animal of result">
                 <div class="album_file">
-                    <img v-bind:src="animal.album_file" alt="" >
+                    <img src="" :srcset="animal.album_file" alt="">
+                    {{animal.album_file}}
                 </div>
                 <div class="font-bold text-xl">{{animal.shelter_name}}</div>
                 <div>{{animal.shelter_address}}</div>
@@ -90,7 +91,7 @@
                 .then(res => res.json())
                 .then(data => {
                     this.animals = data;
-                    console.log(data);
+                    // console.log(data);
                 })
             }
         }).mount('#app')
