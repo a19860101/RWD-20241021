@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <a href="#" v-on:click="notice()">NOTICE</a>
+        <a href="#" @click="test()">TEST</a>
+        
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    title: 'hello'
+                }
+            },
+            methods:{
+                notice(){
+                    alert('注意');
+                },
+                test(){
+                    alert('test');
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
