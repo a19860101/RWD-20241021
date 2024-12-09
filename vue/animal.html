@@ -33,12 +33,13 @@
 </head>
 <body>
     <div id="app">
-        <select name="" id="" class="border border-zinc-700 p-2">
+        <select name="place" id="place" @change="getPlace()" class="border border-zinc-700 p-2">
             <option>--請選擇收容所--</option>
             <template v-for="place in uniquePlace">
                 <option v-bind:value="place">{{place}}</option>
             </template>
         </select>
+        {{selectedPlace}}
         <!-- <div class="container">
             <div class="box" v-for="animal of animals">
                 <div class="album_file">
@@ -56,7 +57,15 @@
         Vue.createApp({
             data(){
                 return {
-                    animals:[]
+                    animals:[],
+                    selectedPlace:''
+                }
+            },
+            methods:{
+                getPlace(){
+                    let p = document.querySelector('#place').value;
+                    // console.log(p)
+                    this.selectedPlace = p;
                 }
             },
             computed:{
