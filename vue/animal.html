@@ -39,9 +39,9 @@
                 <option v-bind:value="place">{{place}}</option>
             </template>
         </select>
-        {{selectedPlace}}
-        <!-- <div class="container">
-            <div class="box" v-for="animal of animals">
+        <!-- {{result}} -->
+        <div class="container">
+            <div class="box" v-for="animal of result">
                 <div class="album_file">
                     <img v-bind:src="animal.album_file" alt="" >
                 </div>
@@ -51,7 +51,7 @@
                 <div>{{animal.animal_Variety}}</div>
                 <div>資料更新時間{{animal.cDate}}</div>
             </div>
-        </div> -->
+        </div>
     </div>
     <script>
         Vue.createApp({
@@ -78,7 +78,11 @@
                 },
                 variety(){
                     return [...new Set(this.animals.map(animal=>animal.animal_Variety))]
+                },
+                result(){
+                    return this.animals.filter(animal=>animal.animal_place === this.selectedPlace)
                 }
+
             },
             created(){
                 let url = 'https://data.moa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL&IsTransData=1';
