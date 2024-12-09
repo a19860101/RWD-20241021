@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const city = ['台北市','台北市','台北市','新北市','新北市','桃園市','桃園市','桃園市'];
+        // const uniqueCity = new Set(city);
+        // const uniqueCityArry = Array.from(uniqueCity);
+
+        // const uniqueCityArry = Array.from(new Set(city));
+
+        const uniqueCityArry = [...new Set(city)];
+        // spread operator
+        console.log(uniqueCityArry)
+
+        const num = [111,111,111,111,111,222,333,333,333,333,444,444,555,666,666,777]
+        const uniqueNum = [...new Set(num)];
+        console.log(uniqueNum)
+    </script>
+</body>
+</html>
