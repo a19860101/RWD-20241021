@@ -5,19 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .container {
+            width: 800px;
+            margin-inline: auto;
+            display: grid;
+            gap:30px;
+            grid-template-columns: repeat(2,1fr);
+            h2 {
+                height: 50px;
+            }
+            .poster {
+                aspect-ratio: 3 / 4;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .search {
+            width: 800px;
+            margin-inline: auto;
+            .form-control {
+                padding: 5px;
+                border-radius: 5px;
+                border:1px solid #666;
+                margin-right: 10px;
+            }
+            .btn {
+                padding:3px 15px;
+            }
+        }
 
+    </style>
 </head>
 <body>
     <div id="app">
-        <form action="" method="get">
-            <input type="text" placeholder="請輸入電影名稱" v-model="s">
-            <input type="submit" value="尋找" @click.prevent="getMovies()">
-        </form>
+        <div class="search">
+            <form action="" method="get">
+                <input type="text" class="form-control" placeholder="請輸入電影名稱" v-model="s">
+                <input type="submit" class="btn" value="尋找" @click.prevent="getMovies()">
+            </form>
+        </div>
         <div class="container">
-            <!-- {{movies}} -->
             <div v-for="movie of movies">
                 <h2>{{movie.Title}} / {{movie.Year}}</h2>
-                <img :src="movie.Poster" :alt="movie.Title">
+                <div class="poster">
+                    <img v-if="movie.Poster != 'N/A'" :src="movie.Poster" :alt="movie.Title">
+                    <img v-else src="https://placehold.co/400x600">
+                    <!-- https://placehold.co/ -->
+                </div>
             </div>
         </div>
     </div>
@@ -27,7 +65,7 @@
                 return {
                     movies: [],
                     apikey: '18456e59',
-                    s:''
+                    s:'spider'
                 }
             },
             methods:{
