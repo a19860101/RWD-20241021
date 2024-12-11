@@ -47,8 +47,10 @@
                 <input type="text" class="form-control" placeholder="請輸入電影名稱" v-model="s">
                 <input type="submit" class="btn" value="尋找" @click.prevent="getMovies()">
             </form>
+            <div>共{{total}}筆資料,{{page}}頁</div>
         </div>
         <div class="container">
+            
             <div v-for="movie of movies">
                 <h2>{{movie.Title}} / {{movie.Year}}</h2>
                 <div class="poster">
@@ -65,7 +67,9 @@
                 return {
                     movies: [],
                     apikey: '18456e59',
-                    s:'spider'
+                    s:'spider',
+                    currentPage: 1,
+                    total:0,
                 }
             },
             methods:{
@@ -75,7 +79,13 @@
                     .then(res=>res.json())
                     .then(data=>{
                         this.movies = data.Search
+                        this.total = data.totalResults
                     })
+                }
+            },
+            computed:{
+                page(){
+                    return Math.ceil(this.total / 10);
                 }
             }
             // created(){
