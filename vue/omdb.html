@@ -41,6 +41,11 @@
             display: flex;
             justify-content: space-between;
         }
+        a[disabled] {
+            color: #666;
+            cursor:not-allowed;
+            text-decoration: line-through;
+        }
 
     </style>
 </head>
@@ -48,18 +53,19 @@
     <div id="app">
         <div class="search">
             <form action="" method="get">
-                <input type="text" class="form-control" placeholder="請輸入電影名稱" v-model="s">
+                <input type="text" class="form-control" placeholder="請輸入電影名稱(英文)" v-model="s">
                 <input type="submit" class="btn" value="尋找" @click.prevent="getMovies()">
             </form>
-            <div>共{{total}}筆資料,{{page}}頁</div>
+            <div v-if="movies.length > 0">共{{total}}筆資料,共{{page}}頁</div>
             <div class="pages">
                 <a href="#"  @click="prevPage()" v-if="currentPage > 1">上一頁</a>
-                <div>{{currentPage}}</div>
+                <a href="#"  v-else disabled v-if="movies.length > 0">上一頁</a>
+                <div v-if="movies.length > 0">{{currentPage}}</div>
                 <a href="#"  @click="nextPage()" v-if="currentPage < page">下一頁</a>
+                <a href="#"  v-else disabled v-if="movies.length > 0">下一頁</a>
             </div>
         </div>
         <div class="container">
-            
             <div v-for="movie of movies">
                 <h2>{{movie.Title}} / {{movie.Year}}</h2>
                 <div class="poster">
@@ -76,7 +82,7 @@
                 return {
                     movies: [],
                     apikey: '18456e59',
-                    s:'spider',
+                    s:'moana',
                     currentPage: 1,
                     total:0,
                 }
@@ -87,7 +93,8 @@
                     fetch(url)
                     .then(res=>res.json())
                     .then(data=>{
-                        this.movies = data.Search
+                        this.movies = data.Search.sort((b,a)=>a.Year - b.Year)
+                        // this.movies = data.Search
                         this.total = data.totalResults
                         this.currentPage = 1;
                     })
@@ -98,7 +105,7 @@
                     fetch(url)
                     .then(res=>res.json())
                     .then(data=>{
-                        this.movies = data.Search
+                        this.movies = data.Search.sort((b,a)=>a.Year - b.Year)
                     })
                 },
                 prevPage(){
@@ -107,13 +114,16 @@
                     fetch(url)
                     .then(res=>res.json())
                     .then(data=>{
-                        this.movies = data.Search
+                        this.movies = data.Search.sort((b,a)=>a.Year - b.Year)
                     })
                 }
             },
             computed:{
                 page(){
                     return Math.ceil(this.total / 10);
+                },
+                newToOld(){
+                    return this.movies.sort((b,a)=>a.Year - b.Year);
                 }
             }
             // created(){
