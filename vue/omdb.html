@@ -10,11 +10,12 @@
 <body>
     <div id="app">
         <form action="" method="get">
-            <input type="text" placeholder="請輸入電影名稱">
+            <input type="text" placeholder="請輸入電影名稱" v-model="s">
             <input type="submit" value="尋找" @click.prevent="getMovies()">
         </form>
         <div class="container">
-            <div>
+            <!-- {{movies}} -->
+            <div v-for="movie of movies">
                 <h2>{{movie.Title}} / {{movie.Year}}</h2>
                 <img :src="movie.Poster" :alt="movie.Title">
             </div>
@@ -24,17 +25,18 @@
         Vue.createApp({
             data(){
                 return {
-                    movie: [],
-                    apikey: '18456e59'
+                    movies: [],
+                    apikey: '18456e59',
+                    s:''
                 }
             },
             methods:{
                 getMovies(){
-                    let url = `https://www.omdbapi.com/?i=tt13622970&apikey=${this.apikey}`
+                    let url = `https://www.omdbapi.com/?s=${this.s}&apikey=${this.apikey}`
                     fetch(url)
                     .then(res=>res.json())
                     .then(data=>{
-                        this.movie = data
+                        this.movies = data.Search
                     })
                 }
             }
