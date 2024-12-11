@@ -11,7 +11,7 @@
     <div id="app">
         <form action="" method="get">
             <input type="text" placeholder="請輸入電影名稱">
-            <input type="submit" value="尋找">
+            <input type="submit" value="尋找" @click.prevent="getMovies()">
         </form>
         <div class="container">
             <div>
@@ -24,17 +24,28 @@
         Vue.createApp({
             data(){
                 return {
-                    movie: []
+                    movie: [],
+                    apikey: '18456e59'
                 }
             },
-            created(){
-                let url = 'https://www.omdbapi.com/?i=tt13622970&apikey=18456e59';
-                fetch(url)
-                .then(res=>res.json())
-                .then(data=>{
-                    this.movie = data
-                })
+            methods:{
+                getMovies(){
+                    let url = `https://www.omdbapi.com/?i=tt13622970&apikey=${this.apikey}`
+                    fetch(url)
+                    .then(res=>res.json())
+                    .then(data=>{
+                        this.movie = data
+                    })
+                }
             }
+            // created(){
+            //     let url = 'https://www.omdbapi.com/?i=tt13622970&apikey=18456e59';
+            //     fetch(url)
+            //     .then(res=>res.json())
+            //     .then(data=>{
+            //         this.movie = data
+            //     })
+            // }
         }).mount('#app')
     </script>
 </body>
