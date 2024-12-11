@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        {{movie}}
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return {
+                    movie: []
+                }
+            },
+            created(){
+                let url = 'https://www.omdbapi.com/?i=tt13622970&apikey=18456e59';
+                fetch(url)
+                .then(res=>res.json())
+                .then(data=>{
+                    this.movie = data
+                })
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
