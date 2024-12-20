@@ -22,6 +22,7 @@
                 color: #000;
                 display: inline-block;
                 padding:  20px;
+                
             }
         }
         .menu li{
@@ -32,13 +33,21 @@
             background-color: #fa0;
             position: absolute;
 
-            display: none;
+            /* display: none; */
+            opacity: 0;
+            visibility: hidden;
+            transition:500ms
+        }
+        .dropdown {
+            transition: 500ms;
         }
         .dropdown:hover {
             background-color: #fa0;
         }
         .dropdown:hover .dropdown-menu{
-            display: block;
+            /* display: block; */
+            opacity: 1;
+            visibility: visible;
         }
     </style>
 </head>
@@ -65,5 +74,9 @@
             <li><a href="#">Link</a></li>
         </ul>
     </nav>
+    <h1>test</h1>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nemo velit ipsam officia fugiat veniam incidunt aperiam delectus nulla quidem libero corporis, magnam numquam consequatur labore quia laudantium. Corrupti, reprehenderit!
+    </p>
 </body>
 </html>
