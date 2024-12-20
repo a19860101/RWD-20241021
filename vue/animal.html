@@ -39,9 +39,17 @@
                 <option v-bind:value="place">{{place}}</option>
             </template>
         </select>
+        <select name="variety" id="variety" v-model="selectedVariety" class="border border-zinc-700 p-2">
+            <option disabled value="">--請選擇品種--</option>
+            <template v-for="v in variety">
+                <option v-bind:value="v">{{v}}</option>
+            </template>
+        </select>
+        <button @click="result()">show</button>
         <!-- {{result}} -->
+         <!-- {{search_result}} -->
         <div class="container">
-            <div class="box" v-for="animal of result">
+            <div class="box" v-for="animal of search_result">
                 <div class="album_file">
                     <img src="" :srcset="animal.album_file" alt="">
                     {{animal.album_file}}
@@ -60,6 +68,8 @@
                 return {
                     animals:[],
                     selectedPlace:'',
+                    selectedVariety:'',
+                    search_result:''
                 }
             },
             methods:{
@@ -68,6 +78,9 @@
                 //     // console.log(p)
                 //     this.selectedPlace = p;
                 // }
+                result(){
+                    this.search_result = this.animals.filter(animal=>animal.animal_place === this.selectedPlace && animal.animal_Variety === this.selectedVariety)
+                }
             },
             computed:{
                 place(){
@@ -80,9 +93,9 @@
                 variety(){
                     return [...new Set(this.animals.map(animal=>animal.animal_Variety))]
                 },
-                result(){
-                    return this.animals.filter(animal=>animal.animal_place === this.selectedPlace)
-                }
+                // result(){
+                //     return this.animals.filter(animal=>animal.animal_place === this.selectedPlace)
+                // }
 
             },
             created(){

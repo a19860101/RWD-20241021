@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav {
+            background-color: #ccc;
+            /* padding: 15px; */
+            ul {
+                list-style: none;
+                display: flex;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+                display: inline-block;
+                padding:  20px;
+            }
+        }
+        .menu li{
+            position: relative;
+        }
+        .dropdown-menu {
+            flex-direction: column;
+            background-color: #fa0;
+            position: absolute;
+
+            display: none;
+        }
+        .dropdown:hover {
+            background-color: #fa0;
+        }
+        .dropdown:hover .dropdown-menu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown"><a href="#">Link</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Second</a></li>
+                    <li><a href="#">Second</a></li>
+                    <li><a href="#">Second</a></li>
+                    <li><a href="#">Second</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown"><a href="#">Link</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Second</a></li>
+                    <li><a href="#">Second</a></li>
+                    <li><a href="#">Second</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Link</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
