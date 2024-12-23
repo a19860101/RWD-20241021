@@ -7,18 +7,48 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <style>
         .box {
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: fit-content;
+            padding: 30px;
+            border-radius:15px;
             background-color: #fa0;
+            position: fixed;
+            inset:0;
+            margin: auto;
+            a {
+                display: inline-block;
+            }
         }
+
     </style>
 </head>
 <body>
-    <div class="box"></div>
+    <div class="box">
+        <h2>HELLO</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At, possimus.
+        </p>
+        <a href="#">LINK</a>
+    </div>
     <script>
+        // timeline
+        gsap.defaults({duration:0.7,opacity:0})
+
+        gsap.timeline()
+        .from('.box',{delay:1})
+        .from('h2',{y:30})
+        .from('p',{x:30})
+        .from('a',{x:-30})
+        
+
+        // gsap.fromTo('.box',{opacity:0},{opacity:1,duration:3})
+        // gsap.fromTo('h2',{opacity:0},{opacity:1,duration:3,delay:1})
+        // gsap.fromTo('p',{opacity:0},{opacity:1,duration:3,delay:2})
+        // gsap.fromTo('a',{opacity:0},{opacity:1,duration:3,delay:3})
+        
         // gsap.to('.box',{x:500,duration:1,delay:1})
         // gsap.from('.box',{opacity:0,duration:10})
-        gsap.fromTo('.box',{x:200},{x:500,duration:1,delay:1})
+        // gsap.fromTo('.box',{x:200},{x:500,duration:1,delay:1})
     </script>
 </body>
 </html>
